@@ -12,20 +12,21 @@
 
 
 
-    <nav id="sideBar" class="h-screen bg-[#242F3F] w-1/6">
+    <nav id="sideBar" class="h-screen w-60 bg-[#242F3F] grid grid-rows-[100px] shadow-">
         <div id="titleProject" class="flex flex-row justify-center gap-2 pt-12">
             <img src="src/img/logo.png" alt="logo project" class="size-8 mt-0.8">
             <p class="text-white text-2xl font-bold">Projeto X</p>
         </div>
 
-        <div id="menu" class="pt-10 justify-center-safe  text-white gap-3">
-            <p class="inline-flex"><img src="/src/img/dashboard.png" alt="">Dashboard</p><br>
-            <p class="inline-flex"><img src="/src/img/board.png" alt="">Board</p><br>
-            <p class="inline-flex"><img src="/src/img/config.png" alt="">Settings</p>
+        <div id="menu" class="mt-10 ml-15 text-white">
+            <div class="flex flex-row items-center gap-2 mb-2"><img src="/src/img/dashboard.png" alt=""><p>Dashboard</p></div>
+            <div class="flex flex-row items-center gap-2 mb-2"><img src="/src/img/board.png" alt=""><p>Board</p></div>
+            <div class="flex flex-row items-center gap-2 mb-2"><img src="/src/img/config.png" alt=""><p>Settings</p></div>
         </div>
 
-        </nav>
-
+        <div id="logout" class="ml-15 mb-10 text-white self-end">
+            <div class="flex flex-row items-center gap-2"><img src="/src/img/logout.png" alt=""><p>Logout</p></div>
+        </div>
     </nav>
 </body>
 </html>
