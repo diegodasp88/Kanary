@@ -7,9 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-300: oklch(80.8% 0.114 19.571);
-    --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -20,6 +17,8 @@
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-background-start: #0F172A;
+    --color-background-end: #1A102C;
   }
 }
 @layer base {
@@ -186,16 +185,6 @@
   .flex {
     display: flex;
   }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .table {
-    display: table;
-  }
-  .size-8 {
-    width: calc(var(--spacing) * 8);
-    height: calc(var(--spacing) * 8);
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -219,9 +208,6 @@
   }
   .h-screen {
     height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -253,26 +239,14 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-row {
-    flex-direction: row;
-  }
   .items-center {
     align-items: center;
   }
   .justify-center {
     justify-content: center;
   }
-  .justify-center-safe {
-    justify-content: safe center;
-  }
   .justify-evenly {
     justify-content: space-evenly;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -282,16 +256,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-gradient-to-b {
-    --tw-gradient-position: to bottom in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
-  }
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -316,9 +280,6 @@
   }
   .text-\[\#707070\] {
     color: #707070;
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .shadow-2xl\/30 {
     --tw-shadow-alpha: 30%;
