@@ -7,10 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+
+
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -170,9 +173,11 @@
   }
 }
 @layer utilities {
+
   .flex {
     display: flex;
   }
+
   .inline-flex {
     display: inline-flex;
   }
@@ -192,27 +197,42 @@
   .w-1\/6 {
     width: calc(1/6 * 100%);
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-60 {
+    width: calc(var(--spacing) * 60);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
   .resize {
     resize: both;
   }
+
   .flex-row {
     flex-direction: row;
   }
+
   .justify-center {
     justify-content: center;
   }
   .justify-center-safe {
     justify-content: safe center;
   }
+
+
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
+
+
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -220,6 +240,7 @@
   .bg-background-sidebar-black {
     background-color: var(--color-background-sidebar-black);
   }
+
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -236,6 +257,7 @@
   .to-background-end {
     --tw-gradient-to: var(--color-background-end);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -243,6 +265,8 @@
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
+
+
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -276,6 +300,7 @@
   inherits: false;
   initial-value: solid;
 }
+
 @property --tw-gradient-position {
   syntax: "*";
   inherits: false;
@@ -318,6 +343,7 @@
   inherits: false;
   initial-value: 100%;
 }
+
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -340,6 +366,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;

@@ -14,7 +14,8 @@
     "tailwindcss": "^4.1.12"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.12"
+    "@tailwindcss/cli": "^4.1.12",
+    "package.json": "^2.0.1"
   }
 }
 
