@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -o ./src/css/styles.css --minify"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +16,9 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12"
   }
-  
 }
+
+
 
 
 
