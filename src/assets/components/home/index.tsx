@@ -1,9 +1,4 @@
-import {Login} from './Login';
-import {RecoveryPass} from './RecoveryPass';
+import { Login } from './Login';
+import { RecoveryPass } from './RecoveryPass';
 
-
-
-
-
-
-export default{Login, RecoveryPass}
+export default { Login };
