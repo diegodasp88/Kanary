@@ -1,14 +1,13 @@
-import { Login } from "./assets/components/home/Login"
-import { RecoveryPass } from "./assets/components/home/RecoveryPass"
+import { Login } from './assets/components/home/Login';
+import { RecoveryPass } from './assets/components/home/RecoveryPass';
 
 function App() {
-
-   return (
+  return (
     <>
-      <Login/>
-      <RecoveryPass/>
+      <Login />
+      {/* <RecoveryPass/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
