@@ -1,11 +1,11 @@
-import { Login } from './assets/components/home/Login';
-import { RecoveryPass } from './assets/components/home/RecoveryPass';
+import { Login } from './components/home/Login';
+import { RecoveryPass } from './components/home/RecoveryPass';
 
 function App() {
   return (
     <>
       <Login />
-      {/* <RecoveryPass/> */}
+      <RecoveryPass/>
     </>
   );
 }
