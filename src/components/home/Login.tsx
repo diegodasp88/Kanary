@@ -12,7 +12,6 @@ export function Login() {
       <div className="bg-[url('/src/assets/img/backgroundLIGHT.png')] bg-cover bg-fixed h-screen">
         <RecoveryPass
           isRecoveryPassVisible={isRecoveryPassVisible}
-          setIsRecoveryPassVisible={() => setIsRecoveryPassVisible(false)}
         >
         <main className={`${
           isLoginVisible
@@ -57,12 +56,21 @@ export function Login() {
                       setIsRecoveryPassVisible(!isRecoveryPassVisible) 
                       setIsLoginVisible(!isLoginVisible)
                     }}
-                    className="text-xs font-thin self-end  mb-5 hover:underline cursor-pointer"
+                    className="text-xs font-thin self-end mb-5 hover:underline cursor-pointer"
                   >
                     Esqueci minha senha
                   </p>
                   <CustomButton label="Login" />
                 </form>
+                <p
+                  className="mt-2 text-xs font-thin"
+                > Não tem uma conta? &nbsp;
+                  <span
+                    className='font-bold hover:underline cursor-pointer'
+                  > 
+                  Cadastre-se.
+                  </span>
+                </p>
               </div>
             </div>
           </div>
