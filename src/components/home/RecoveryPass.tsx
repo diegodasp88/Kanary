@@ -1,10 +1,13 @@
-export function RecoveryPass() {
+const RecoveryPass = ({ children, isRecoveryPassVisible, setIsRecoveryPassVisible }) => {
+  
   return (
-    <div
-      id="background"
-      className="bg-[url('/src/assets/img/backgroundLIGHT.png')] bg-cover bg-fixed h-screen"
-    >
-      <main className="justify-center w-screen h-screen items-center">
+    <div>
+      <main className={`${
+          isRecoveryPassVisible
+            ? 'flex justify-center w-screen h-screen items-center'
+            : 'hidden'
+        }`}
+      >
         <div
           id="menuLogin"
           className="w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30"
@@ -36,6 +39,9 @@ export function RecoveryPass() {
           </div>
         </div>
       </main>
+      {children}
     </div>
   );
 }
+
+export default RecoveryPass;
