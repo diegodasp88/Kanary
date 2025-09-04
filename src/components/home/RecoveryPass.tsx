@@ -22,14 +22,14 @@ const RecoveryPass = ({ children, isRecoveryPassVisible, setIsRecoveryPassVisibl
               className="w-45 h-30 rounded-xl"
             />
             <div className="w-[100%] text-center flex flex-col">
-              <h1 className="font-bold text-2xl ">Recupere sua senha!</h1>
+              <h1 className="font-medium text-1xl mb-2">Recupere sua senha!</h1>
               <form action="#" className="flex flex-col">
                 <input
                   type="email"
                   name="RecoveryPassword"
                   id="RecoveryPasswordUser"
                   placeholder="Email de recuperação"
-                  className="bg-white opacity-40 rounded-lg pl-2 pt-0.5 pb-0.5"
+                  className="bg-white opacity-40 rounded-lg pl-2 pt-0.5 pb-0.5 mb-3 "
                 />
                 <button className="bg-black text-white rounded-lg h-[30px] cursor-pointer hover:opacity-70">
                   Recuperar
