@@ -1,4 +1,11 @@
-const RecoveryPass = ({ children, isRecoveryPassVisible, setIsRecoveryPassVisible }) => {
+const RecoveryPass = ({ children, 
+  isRecoveryPassVisible, 
+  // setIsRecoveryPassVisible 
+}: {
+  children?: React.ReactNode;
+  isRecoveryPassVisible: boolean;
+  // setIsRecoveryPassVisible: React.Dispatch<React.SetStateAction<boolean>>;
+})=> {
   
   return (
     <div>
