@@ -1,12 +1,11 @@
-import { Index } from '../home/index'
+import { Login } from './components/home/Login';
 
 function App() {
-
   return (
     <>
-      <Index />
+      <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
