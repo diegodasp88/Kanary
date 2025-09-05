@@ -16,7 +16,6 @@ export function Login() {
       >
         <RecoveryPass
           isRecoveryPassVisible={isRecoveryPassVisible}
-          setIsRecoveryPassVisible={() => setIsRecoveryPassVisible(false)}
         >
           <main
             className={`${
