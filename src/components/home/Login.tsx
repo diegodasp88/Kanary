@@ -1,72 +1,78 @@
-import { useState } from 'react';
-import CustomButton from '../CustomButton';
-import RecoveryPass from './RecoveryPass';
+import { useState } from "react";
+import CustomButton from "../CustomButton";
+import RecoveryPass from "./RecoveryPass";
+import backgroundLight from "../../assets/img/backgroundLIGHT.png";
+import logoKanary from "../../assets/img/logoKanarySemFundo.png";
 
 export function Login() {
-
-  const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false)
-  const [isLoginVisible, setIsLoginVisible] = useState(true)
+  const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
+  const [isLoginVisible, setIsLoginVisible] = useState(true);
 
   return (
     <>
-      <div className="bg-[url('/src/assets/img/backgroundLIGHT.png')] bg-cover bg-fixed h-screen">
+      <div
+        className="bg-cover bg-center h-screen"
+        style={{ backgroundImage: `url(${backgroundLight})` }}
+      >
         <RecoveryPass
           isRecoveryPassVisible={isRecoveryPassVisible}
           setIsRecoveryPassVisible={() => setIsRecoveryPassVisible(false)}
         >
-        <main className={`${
-          isLoginVisible
-            ? "flex justify-center w-screen h-screen items-center"
-            : "hidden"
-          }`}>
-          <div
-            id="menuLogin"
-            className=" w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30"
+          <main
+            className={`${
+              isLoginVisible
+                ? "flex justify-center w-screen h-screen items-center"
+                : "hidden"
+            }`}
           >
             <div
-              id="containerLogin"
-              className="flex flex-col items-center m-[100px]"
+              id="menuLogin"
+              className=" w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30"
             >
-              <img
-                src="src/assets/img/logoKanarySemFundo.png"
-                alt="logolight"
-                className="w-45 h-30 rounded-xl"
-              />
-              <div className="w-[100%] text-center flex flex-col">
-                <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
-                <p className="font-thin text-base mb-5">
-                  Produtividade simples, equipes mais fortes. <br />
-                  Eficiência de graça!
-                </p>
-                <form action="#" className="flex flex-col">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="bg-white opacity-40 rounded-lg mb-3 pl-2 pt-0.5 pb-0.5"
-                  />
-                  <input
-                    type="password"
-                    name="password"
-                    id="passwordUser"
-                    placeholder="Senha"
-                    className="bg-white opacity-40 rounded-lg pl-2 pt-0.5 pb-0.5"
-                  />
-                  <p
-                    onClick={() => {
-                      setIsRecoveryPassVisible(!isRecoveryPassVisible) 
-                      setIsLoginVisible(!isLoginVisible)
-                    }}
-                    className="text-xs font-thin self-end  mb-5 hover:underline cursor-pointer"
-                  >
-                    Esqueci minha senha
+              <div
+                id="containerLogin"
+                className="flex flex-col items-center m-[100px]"
+              >
+                <img
+                  src={logoKanary}
+                  alt="logolight"
+                  className="w-45 h-30 rounded-xl"
+                />
+                <div className="w-[100%] text-center flex flex-col">
+                  <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
+                  <p className="font-thin text-base mb-5">
+                    Produtividade simples, equipes mais fortes. <br />
+                    Eficiência de graça!
                   </p>
-                  <CustomButton label="Login" />
-                </form>
+                  <form action="#" className="flex flex-col">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className="bg-white opacity-40 rounded-lg mb-3 pl-2 pt-0.5 pb-0.5"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      id="passwordUser"
+                      placeholder="Senha"
+                      className="bg-white opacity-40 rounded-lg pl-2 pt-0.5 pb-0.5"
+                    />
+                    <p
+                      onClick={() => {
+                        setIsRecoveryPassVisible(!isRecoveryPassVisible);
+                        setIsLoginVisible(!isLoginVisible);
+                      }}
+                      className="text-xs font-thin self-end  mb-5 hover:underline cursor-pointer"
+                    >
+                      Esqueci minha senha
+                    </p>
+                    <CustomButton label="Login" />
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
         </RecoveryPass>
       </div>
     </>

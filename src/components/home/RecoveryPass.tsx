@@ -1,18 +1,19 @@
-const RecoveryPass = ({ children, 
-  isRecoveryPassVisible, 
-  // setIsRecoveryPassVisible 
+const RecoveryPass = ({
+  children,
+  isRecoveryPassVisible,
+  setIsRecoveryPassVisible,
 }: {
   children?: React.ReactNode;
   isRecoveryPassVisible: boolean;
-  // setIsRecoveryPassVisible: React.Dispatch<React.SetStateAction<boolean>>;
-})=> {
-  
+  setIsRecoveryPassVisible: () => void;
+}) => {
   return (
     <div>
-      <main className={`${
+      <main
+        className={`${
           isRecoveryPassVisible
-            ? 'flex justify-center w-screen h-screen items-center'
-            : 'hidden'
+            ? "flex justify-center w-screen h-screen items-center"
+            : "hidden"
         }`}
       >
         <div
@@ -49,6 +50,6 @@ const RecoveryPass = ({ children,
       {children}
     </div>
   );
-}
+};
 
 export default RecoveryPass;
