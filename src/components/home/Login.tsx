@@ -3,6 +3,7 @@ import CustomButton from "../CustomButton";
 import RecoveryPass from "./RecoveryPass";
 import backgroundLight from "../../assets/img/backgroundLIGHT.png";
 import logoKanary from "../../assets/img/logoKanarySemFundo.png";
+import { SlEnvolope, SlLock } from "react-icons/sl";
 
 export function Login() {
   const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
@@ -16,6 +17,10 @@ export function Login() {
       >
         <RecoveryPass
           isRecoveryPassVisible={isRecoveryPassVisible}
+          handleClose={() => {
+            setIsRecoveryPassVisible(false);
+            setIsLoginVisible(true);
+          }}
         >
           <main
             className={`${
@@ -35,7 +40,7 @@ export function Login() {
                 <img
                   src={logoKanary}
                   alt="logolight"
-                  className="w-45 h-30 rounded-xl"
+                  className="w-50 h-30 rounded-xl"
                 />
                 <div className="w-[100%] text-center flex flex-col">
                   <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
@@ -44,19 +49,27 @@ export function Login() {
                     Eficiência de graça!
                   </p>
                   <form action="#" className="flex flex-col">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      className="bg-white opacity-40 rounded-lg mb-3 pl-2 pt-0.5 pb-0.5"
-                    />
-                    <input
-                      type="password"
-                      name="password"
-                      id="passwordUser"
-                      placeholder="Senha"
-                      className="bg-white opacity-40 rounded-lg pl-2 pt-0.5 pb-0.5"
-                    />
+                    <div className="relative bg-white opacity-50 rounded-lg mb-3">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        className="border-white border-2 opacity-100 rounded-lg pl-8 pt-0.5 pb-0.5 w-full hover:border-black/30 hover:border-2"
+                      />
+                      <SlEnvolope className="absolute left-3 top-[17px] transform -translate-y-1/2 text-gray-500"/>
+                    </div>
+                    
+                    <div className="relative bg-white opacity-50 rounded-lg">
+                      <input
+                        type="password"
+                        name="password"
+                        id="passwordUser"
+                        placeholder="Senha"
+                        className="border-2 border-white opacity-100 rounded-lg pl-8 pt-0.5 pb-0.5 w-full hover:border-black/30 hover:border-2"
+                      />
+                      <SlLock className="absolute left-[11px] top-[15px] transform -translate-y-1/2 text-gray-500"/>
+                    </div>
+                    
                     <p
                       onClick={() => {
                         setIsRecoveryPassVisible(!isRecoveryPassVisible);
