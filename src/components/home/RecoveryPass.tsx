@@ -1,4 +1,7 @@
-import { SlClose, SlEnvolope } from "react-icons/sl";
+import { SlClose, SlEnvolope} from "react-icons/sl";
+
+
+
 
 const RecoveryPass = ({ children, 
   isRecoveryPassVisible, handleClose
@@ -45,7 +48,7 @@ const RecoveryPass = ({ children,
                     placeholder="Email de recuperação"
                     className="rounded-lg border-2 opacity-100 border-white pl-8 pt-0.5 pb-0.5 w-full hover:border-black/30 hover:border-2"
                   />
-                  <SlEnvolope className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"/>
+                  <SlEnvolope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"/>
                 </div>
                 
                 <button type="submit" className="bg-black text-white pt-1 pb-1 rounded-lg cursor-pointer hover:opacity-70">

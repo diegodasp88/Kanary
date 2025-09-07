@@ -4,10 +4,13 @@ import RecoveryPass from "./RecoveryPass";
 import backgroundLight from "../../assets/img/backgroundLIGHT.png";
 import logoKanary from "../../assets/img/logoKanarySemFundo.png";
 import { SlEnvolope, SlLock } from "react-icons/sl";
+import Register from "./Register"
 
 export function Login() {
-  const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
   const [isLoginVisible, setIsLoginVisible] = useState(true);
+  const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
+
+  const [isRegisterVisible, setIsRegisterVisible] = useState(false)
 
   return (
     <>
@@ -22,6 +25,11 @@ export function Login() {
             setIsLoginVisible(true);
           }}
         >
+
+        <Register
+          isRegisterVisible={isRegisterVisible}
+          
+          >
           <main
             className={`${
               isLoginVisible
@@ -69,7 +77,9 @@ export function Login() {
                       />
                       <SlLock className="absolute left-[11px] top-[15px] transform -translate-y-1/2 text-gray-500"/>
                     </div>
-                    
+
+
+
                     <p
                       onClick={() => {
                         setIsRecoveryPassVisible(!isRecoveryPassVisible);
@@ -81,10 +91,20 @@ export function Login() {
                     </p>
                     <CustomButton label="Login" />
                   </form>
+                    <p
+                      onClick={() => {
+                        setIsRegisterVisible(!isRegisterVisible);
+                        setIsLoginVisible(!isLoginVisible);
+                      }}
+                      className="text-xs font-thin self-center  mt-2 "
+                    >
+                      Ainda sem cadastro? <span className="cursor-pointer hover:underline font-bold">Cadastre-se</span>
+                    </p>
                 </div>
               </div>
             </div>
           </main>
+        </Register>
         </RecoveryPass>
       </div>
     </>
