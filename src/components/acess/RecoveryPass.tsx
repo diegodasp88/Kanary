@@ -1,5 +1,7 @@
 import { SlArrowLeftCircle, SlEnvolope } from "react-icons/sl";
 import Input from "../elements/CustomInput";
+import logoKanary from "../../assets/img/logoKanarySemFundo.png";
+
 
 const RecoveryPass = ({
   children,
@@ -28,7 +30,7 @@ const RecoveryPass = ({
           />
           <div className="flex flex-col items-center m-[100px] w-[300px]">
             <img
-              src="src/assets/img/logoKanarySemFundo.png"
+              src={logoKanary}
               alt="logolight"
               className="w-50 h-30 rounded-xl"
             />
