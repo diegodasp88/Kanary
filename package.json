@@ -1,30 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "projetox",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -o ./src/css/styles.css --minify"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "tailwindcss": "^4.1.12"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "package.json": "^2.0.1"
-  }
-}
-
-
-
-
-
-=======
   "name": "kanary",
   "private": true,
   "version": "0.0.0",
@@ -59,4 +33,3 @@
     "vite-plugin-imagemin": "^0.6.1"
   }
 }
->>>>>>> React-Test
